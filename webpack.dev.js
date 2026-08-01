@@ -1,10 +1,12 @@
-import merge from 'webpack-merge';
-import webpackCommon from './webpack.common.js';
+import { merge } from 'webpack-merge';
+import common from './webpack.common.js';
 
-export default merge(webpackCommon, {
+export default merge(common, {
   mode: 'development',
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   devServer: {
-    watchFiles: ['./src/main.html'],
+    static: './dist',
+    open: true,
+    hot: true,
   },
 });
