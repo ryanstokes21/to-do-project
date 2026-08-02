@@ -1,4 +1,4 @@
-function createGreeting() {
+export function createGreeting() {
   const currentHour = new Date().getHours();
   let message;
 
@@ -11,12 +11,4 @@ function createGreeting() {
   }
 
   return message;
-}
-
-export default function renderDashboard(content) {
-  const greeting = document.createElement('p');
-  greeting.classList.add('dashboard-greeting');
-  createGreeting.textContent = createGreeting();
-
-  console.log('dashboard tab');
 }

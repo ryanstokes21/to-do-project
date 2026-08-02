@@ -1,0 +1,13 @@
+const tabs = document.querySelectorAll('.tab');
+
+export default function loadPage(page) {
+  tabs.forEach((tab) => {
+    tab.hidden = true;
+  });
+
+  const activeTab = document.querySelector(`#${page}-tab`);
+
+  if (activeTab) {
+    activeTab.hidden = false;
+  }
+}
