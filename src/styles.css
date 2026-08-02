@@ -45,6 +45,9 @@ body {
 .sidebar {
   grid-row: 1/3;
 
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
   padding: 2.5rem;
 
   background: #0f172a;
@@ -53,6 +56,8 @@ body {
 
 .sidebar h1 {
   font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .sidebar h1 span {
@@ -62,7 +67,6 @@ body {
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
 }
 
 .nav-header {
@@ -88,4 +92,34 @@ body {
 
 .nav-button:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.icon-button {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  color: #6e7885;
+  border: none;
+  border-radius: 0.6rem;
+
+  background: transparent;
+
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#content {
+  padding: 3rem;
 }
